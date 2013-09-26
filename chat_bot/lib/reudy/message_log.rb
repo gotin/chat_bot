@@ -53,7 +53,8 @@ module Gimite
     #発言を追加
     def addMsg(from_nick, body, to_outer = true)
       File.open(@innerFileName, "a") do |f|
-        YAML.dump({:fromNick => from_nick, :body => body}, f)
+        yaml = YAML.dump({:fromNick => from_nick, :body => body})
+        f.puts yaml.force_encoding 'UTF-8'
       end
       @size += 1
       @observers.each(&:onAddMsg)

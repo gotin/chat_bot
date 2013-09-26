@@ -1,0 +1,54 @@
+---
+- !ruby/object:Gimite::Word
+  str: こんにち
+  author: 小島
+  mids:
+  - 18
+  - 21
+  - 22
+  - 23
+- !ruby/object:Gimite::Word
+  str: うどんも食べたい
+  author: 小島
+  mids:
+  - 27
+- !ruby/object:Gimite::Word
+  str: 焼き肉
+  author: 小島
+  mids:
+  - 29
+- !ruby/object:Gimite::Word
+  str: 誰かいませんか
+  author: 小島
+  mids: []
+- !ruby/object:Gimite::Word
+  str: ''
+  author: 小島
+  mids:
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  - 36
+- !ruby/object:Gimite::Word
+  str: ''
+  author: 小島
+  mids:
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  - 31
+  - 32
+  - 33
+  - 34
+  - 35
+  - 36

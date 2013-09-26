@@ -1,78 +1,120 @@
 ---
-:body: こんにちは。
-:fromNick: Default
+:fromNick: 小島
+:body: こんにちはー
 ---
-:body: おはよう。
-:fromNick: Default
+:fromNick: '!'
+:body: こんにちはー
 ---
-:body: こんばんは。
-:fromNick: Default
+:fromNick: 小島
+:body: どなたですか？
 ---
-:body: 何？
-:fromNick: Default
+:fromNick: '!'
+:body: どなたですか？
 ---
-:body: 不確定だ。
-:fromNick: Default
+:fromNick: 小島
+:body: まね？
 ---
-:body: どうして？
-:fromNick: Default
+:fromNick: '!'
+:body: こんにちはー
 ---
-:body: なんでやねん。
-:fromNick: Default
+:fromNick: 小島
+:body: bot
 ---
-:fromNick: test
+:fromNick: '!'
+:body: まね？
+---
+:fromNick: 小島
+:body: おーい
+---
+:fromNick: '!'
+:body: おーい
+---
+:fromNick: 小島
+:body: おなかすいたなー
+---
+:fromNick: '!'
+:body: bot
+---
+:fromNick: 小島
+:body: なんでしょうね。うーむ。
+---
+:fromNick: '!'
+:body: おなかすいたなー
+---
+:fromNick: 小島
+:body: たくさん教えてあげないといけないのか。
+---
+:fromNick: '!'
+:body: なんでしょうね。うーむ。
+---
+:fromNick: 小島
+:body: こまったなぁ。
+---
+:fromNick: '!'
+:body: たくさん教えてあげないといけないのか。
+---
+:fromNick: 小島
 :body: こんにちは
 ---
 :fromNick: '!'
-:body: おはよう。
+:body: こまったなぁ。
 ---
-:fromNick: test
-:body: どもー。
----
-:fromNick: '!'
-:body: こんばんは。
----
-:fromNick: test
-:body: まじすか。
+:fromNick: 小島
+:body: 焼き肉はおいしいよね。
 ---
 :fromNick: '!'
-:body: まじすか。
+:body: こんにちは
 ---
-:fromNick: test
-:body: えっと。
----
-:fromNick: '!'
-:body: えっと。
----
-:fromNick: test
-:body: あれ？
+:fromNick: 小島
+:body: はい、こんにちは。
 ---
 :fromNick: '!'
-:body: 何？
+:body: はい、こんにちは。
 ---
-:fromNick: test
-:body: どうされました？
----
-:fromNick: '!'
-:body: 不確定だ。
----
-:fromNick: test
-:body: ですよね。
+:fromNick: 小島
+:body: ラーメン食べたい。
 ---
 :fromNick: '!'
-:body: あれ？
+:body: ラーメン食べたい。
 ---
-:fromNick: bot
-:body: Hello, b-san
+:fromNick: 小島
+:body: うどんも食べたい
 ---
-:fromNick: bot
-:body: Hello, b-san
+:fromNick: '!'
+:body: うどんも食べたい
 ---
-:fromNick: bot
-:body: Hello, b-san
+:fromNick: 小島
+:body: 最近ファミコンやってる？
 ---
-:fromNick: bot
-:body: Hello, b-san
+:fromNick: '!'
+:body: 焼き肉はおいしいよね。
 ---
-:fromNick: bot
-:body: Hello, b-san
+:fromNick: 小島
+:body: ちきしょう。。
+---
+:fromNick: '!'
+:body: ちきしょう。。
+---
+:fromNick: 小島
+:body: まねばっかりしくさってー
+---
+:fromNick: '!'
+:body: まねばっかりしくさってー
+---
+:fromNick: 小島
+:body: くそー
+---
+:fromNick: '!'
+:body: 最近ファミコンやってる？
+---
+:fromNick: 小島
+:body: 誰かいませんか？
+---
+:fromNick: '!'
+:body: 誰かいませんか？
+---
+:fromNick: 小島
+:body: もう少し面白いこと言ってくれないかなぁ
+---
+:fromNick: '!'
+:body: くそー

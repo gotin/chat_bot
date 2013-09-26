@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 #Copyright (C) 2003 Gimite 市川 <gimite@mx12.freecom.ne.jp>
 #Modified by Glass_saga <glass.saga@gmail.com>
 
@@ -69,7 +70,7 @@ module Gimite
     #ファイルに保存
     def save
       File.open(@filename, "w") do |f|
-        YAML.dump(@words, f)
+        f.puts YAML.dump(@words).force_encoding 'UTF-8'
       end
     end
     

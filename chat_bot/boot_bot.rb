@@ -25,11 +25,12 @@ class ChatClient
   
   include(Gimite)
   
-  def initialize(user, yourNick, site)
+  def initialize(user, bot_name, site)
     @user = user
     @user.client = self
-    @yourNick = yourNick
+    @bot_name = bot_name || 'bot'
     @site = site
+    @pre_time = nil
     greeting = @user.settings["joining_message"]
     puts greeting if greeting
   end
@@ -39,28 +40,27 @@ class ChatClient
       chat = Chat.hear @site
       line = chat['text']
       speaker = chat['name']
-      puts "#{speaker}: #{line}"
+      time = chat['created_at']
       if line.empty?
         @user.onSilent
-      elsif @yourNick
-        @user.onOtherSpeak(@yourNick, line, speaker == @yourNick)
-      elsif line =~ /^(.+?) (.*)$/
-        @user.onOtherSpeak($1, $2)
+      elsif @bot_name != speaker && time != @pre_time
+        @user.onOtherSpeak speaker, line
       else
-        $stderr.print("Error\n")
+        # nothing to do here
       end
+      @pre_time = time
       sleep 5
     end
   end
   
   #補助情報を出力
   def outputInfo(s)
-    Chat.say @yourNick, "(#{s})"
+    Chat.say @bot_name, "(#{s})"
   end
   
   #発言する
   def speak(s)
-    Chat.say @yourNick, s
+    Chat.say @bot_name, s
   end
 end
 
@@ -76,9 +76,9 @@ opt.on('--db DB_TYPE') do |v|
   db = v
 end
 
-nick = 'bot'
-opt.on('-n nickname') do |v|
-  nick = v
+bot_name = 'bot'
+opt.on('-n botname') do |v|
+  bot_name = v
 end
 
 mecab = nil
@@ -96,7 +96,7 @@ opt.parse!(ARGV)
 puts "target site: #{site}"
 
 # STDOUT.sync = true
-client = ChatClient.new(Reudy.new(directory,{},db,mecab),nick,site) #標準入出力用ロイディを作成
+client = ChatClient.new(Reudy.new(directory,{},db,mecab), bot_name, site) #標準入出力用ロイディを作成
 client.start_loop
 
 end
