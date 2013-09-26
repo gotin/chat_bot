@@ -1,0 +1,78 @@
+---
+:body: こんにちは。
+:fromNick: Default
+---
+:body: おはよう。
+:fromNick: Default
+---
+:body: こんばんは。
+:fromNick: Default
+---
+:body: 何？
+:fromNick: Default
+---
+:body: 不確定だ。
+:fromNick: Default
+---
+:body: どうして？
+:fromNick: Default
+---
+:body: なんでやねん。
+:fromNick: Default
+---
+:fromNick: test
+:body: こんにちは
+---
+:fromNick: '!'
+:body: おはよう。
+---
+:fromNick: test
+:body: どもー。
+---
+:fromNick: '!'
+:body: こんばんは。
+---
+:fromNick: test
+:body: まじすか。
+---
+:fromNick: '!'
+:body: まじすか。
+---
+:fromNick: test
+:body: えっと。
+---
+:fromNick: '!'
+:body: えっと。
+---
+:fromNick: test
+:body: あれ？
+---
+:fromNick: '!'
+:body: 何？
+---
+:fromNick: test
+:body: どうされました？
+---
+:fromNick: '!'
+:body: 不確定だ。
+---
+:fromNick: test
+:body: ですよね。
+---
+:fromNick: '!'
+:body: あれ？
+---
+:fromNick: bot
+:body: Hello, b-san
+---
+:fromNick: bot
+:body: Hello, b-san
+---
+:fromNick: bot
+:body: Hello, b-san
+---
+:fromNick: bot
+:body: Hello, b-san
+---
+:fromNick: bot
+:body: Hello, b-san

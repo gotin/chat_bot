@@ -1,15 +1,9 @@
-# -*- coding: utf-8 -*-
-# batch script initial snippet
-require File.expand_path('../config/application', __FILE__)
-Rails.application.require_environment!
+#Copyright (C) 2003 Gimite 市川 <gimite@mx12.freecom.ne.jp>
+#Modified by Glass_saga <glass.saga@gmail.com>
 
+#日本語文字コード判定用コメント
 
-# loop do
-#   Chat.hear_and_say site
-#   sleep 5
-# end
-
-
+$OUT_KCODE= "UTF-8" #出力文字コード
 $REUDY_DIR= "./lib/reudy" unless defined?($REUDY_DIR)
 
 require 'optparse'
@@ -21,46 +15,41 @@ trap(:INT){ exit }
 
 module Gimite
 
-class ChatClient
+class StdioClient
   
   include(Gimite)
   
-  def initialize(user, yourNick, site)
+  def initialize(user, yourNick)
     @user = user
     @user.client = self
     @yourNick = yourNick
-    @site = site
     greeting = @user.settings["joining_message"]
     puts greeting if greeting
   end
   
-  def start_loop
-    loop do
-      chat = Chat.hear @site
-      line = chat['text']
-      speaker = chat['name']
-      puts "#{speaker}: #{line}"
+  def loop
+    STDIN.each_line do |line|
+      line = line.chomp
       if line.empty?
         @user.onSilent
       elsif @yourNick
-        @user.onOtherSpeak(@yourNick, line, speaker == @yourNick)
+        @user.onOtherSpeak(@yourNick, line)
       elsif line =~ /^(.+?) (.*)$/
         @user.onOtherSpeak($1, $2)
       else
         $stderr.print("Error\n")
       end
-      sleep 5
     end
   end
   
   #補助情報を出力
   def outputInfo(s)
-    Chat.say @yourNick, "(#{s})"
+    puts "(#{s})"
   end
   
   #発言する
   def speak(s)
-    Chat.say @yourNick, s
+    puts s
   end
 end
 
@@ -76,7 +65,7 @@ opt.on('--db DB_TYPE') do |v|
   db = v
 end
 
-nick = 'bot'
+nick = 'test'
 opt.on('-n nickname') do |v|
   nick = v
 end
@@ -86,19 +75,10 @@ opt.on('-m','--mecab') do |v|
   mecab = true
 end
 
-site = 'http://localhost:3000'
-opt.on('-s', '--site') do |v|
-  site = v
-end
-
 opt.parse!(ARGV)
 
-puts "target site: #{site}"
-
-# STDOUT.sync = true
-client = ChatClient.new(Reudy.new(directory,{},db,mecab),nick,site) #標準入出力用ロイディを作成
-client.start_loop
+STDOUT.sync = true
+client = StdioClient.new(Reudy.new(directory,{},db,mecab),nick) #標準入出力用ロイディを作成
+client.loop
 
 end
-
-
